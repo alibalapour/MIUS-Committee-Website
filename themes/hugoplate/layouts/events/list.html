@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="section pt-14">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="lg:col-8 md:col-10 text-center mb-12">
+        <h1 class="mb-4">{{ .Title | markdownify }}</h1>
+        {{ with .Params.description }}
+          <p class="text-lg">{{ . | markdownify }}</p>
+        {{ end }}
+        {{ if .Content }}<div class="prose mx-auto mt-6">{{ .Content }}</div>{{ end }}
+      </div>
+    </div>
+
+    <div class="row">
+      {{ range .Pages.ByDate.Reverse }}
+        <article class="md:col-6 lg:col-4 mb-10">
+          <div class="bg-light dark:bg-darkmode-light rounded-lg overflow-hidden h-full flex flex-col">
+            {{/* Cover image if set; otherwise first image resource */}}
+            {{ $cover := .Params.cover }}
+            {{ if not $cover }}
+              {{ with .Resources.ByType "image" }}{{ if . }}{{ $cover = (index . 0).RelPermalink }}{{ end }}{{ end }}
+            {{ end }}
+            {{ if $cover }}
+              <a href="{{ .RelPermalink }}" class="block">
+                {{ partial "image" (dict "Src" $cover "Alt" .Title "Class" "w-full h-48 object-cover" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+              </a>
+            {{ end }}
+
+            <div class="p-6 flex-1 flex flex-col">
+              <h2 class="mb-2 text-xl font-semibold">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h2>
+              <p class="text-sm text-text-light mb-3">
+                {{ with .Date }}{{ .Format "Jan 2, 2006" }}{{ end }}{{ with .Params.location }} • {{ . }}{{ end }}
+              </p>
+              {{ with .Params.summary }}<p class="mb-4">{{ . }}</p>{{ end }}
+
+              {{/* small inline gallery from first 3 images */}}
+              {{ with .Resources.ByType "image" }}
+                <div class="grid grid-cols-3 gap-2 mt-auto">
+                  {{ range first 3 . }}
+                    {{ partial "image" (dict "Src" .RelPermalink "Alt" "Event photo" "Class" "w-full h-20 object-cover rounded") }}
+                  {{ end }}
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

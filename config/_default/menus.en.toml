@@ -46,6 +46,18 @@ name = "404 Page"
 url = "/404"
 
 
+[[main]]
+name = "Events"
+url = "/events"
+weight = 5
+
+
+[[main]]
+name = "Resources"
+url = "/resources"
+weight = 6
+
+
 # footer menu
 [[footer]]
 name = "About"
@@ -57,7 +69,19 @@ name = "Elements"
 url = "/elements"
 weight = 2
 
+
+[[footer]]
+name = "Events"
+url = "/events"
+weight = 3
+
+
+[[footer]]
+name = "Resources"
+url = "/resources"
+weight = 4
+
 [[footer]]
 name = "Privacy Policy"
 url = "/privacy-policy"
-weight = 3
+weight = 5
