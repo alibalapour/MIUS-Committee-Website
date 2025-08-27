@@ -54,7 +54,7 @@ weight = 5
 
 [[main]]
 name = "Resources"
-url = "/resources"
+url = "/committee_resources"
 weight = 6
 
 
@@ -78,7 +78,7 @@ weight = 3
 
 [[footer]]
 name = "Resources"
-url = "/resources"
+url = "/committee_resources"
 weight = 4
 
 [[footer]]
