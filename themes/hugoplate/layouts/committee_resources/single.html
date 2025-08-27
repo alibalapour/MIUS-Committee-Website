@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="section pt-14">
+  <div class="container">
+    <article class="row justify-center">
+      <div class="lg:col-8 md:col-10">
+        <header class="mb-8 text-center">
+          <h1 class="mb-2">{{ .Title }}</h1>
+          <p class="text-sm text-text-light">
+            {{ with .Date }}{{ .Format "Jan 2, 2006" }}{{ end }}{{ with .Params.location }} • {{ . }}{{ end }}
+          </p>
+        </header>
+
+        {{/* Hero: cover or first image */}}
+        {{ $hero := .Params.cover }}
+        {{ if not $hero }}
+          {{ with .Resources.ByType "image" }}{{ if . }}{{ $hero = (index . 0).RelPermalink }}{{ end }}{{ end }}
+        {{ end }}
+        {{ if $hero }}
+          <div class="mb-8">
+            {{ partial "image" (dict "Src" $hero "Alt" .Title "Class" "w-full h-80 object-cover rounded-md" "DisplayXL" "800x" "DisplayLG" "680x" "DisplayMD" "560x") }}
+          </div>
+        {{ end }}
+
+        <div class="prose mb-10">{{ .Content }}</div>
+
+        {{ with .Resources.ByType "image" }}
+          <h2 class="mb-4">Gallery</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {{ range . }}
+              {{ partial "image" (dict "Src" .RelPermalink "Alt" "Event photo" "Class" "w-full h-48 object-cover rounded") }}
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </article>
+  </div>
+</section>
+{{ end }}

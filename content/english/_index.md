@@ -1,8 +1,8 @@
 ---
 # Banner
 banner:
-  title: "MIUS Trainee Committee Website"
-  content: "[Placeholder]"
+  title: "Welcome"
+  content: "**Our Goal:** To facilitate scientific and social networks among graduate students and post doctoral fellows of the M. H. Mohseni Urologic Science (MIUS) Research Centre. "
   image: "/images/MIUS-banner.png"
   button:
     enable: true
