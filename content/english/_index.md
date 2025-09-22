@@ -12,7 +12,7 @@ banner:
 # Features
 features:
   - title: "Resources"
-    image: "/images/service-1.png"
+    image: "/images/resources-icon-home.png"
     content: "[Placeholder for resources]"
     bulletpoints:
       - "[Placeholder]"
@@ -26,7 +26,7 @@ features:
       link: "#"
 
   - title: "Events"
-    image: "/images/service-2.png"
+    image: "/images/events-icon-home.png"
     content: "[Placeholder]"
     bulletpoints:
       - "[Placeholder]"
