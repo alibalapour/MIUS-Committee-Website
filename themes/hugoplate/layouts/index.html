@@ -1,32 +1,45 @@
 {{ define "main" }}
   <!-- Banner -->
   {{ with .Params.banner }}
-    <section class="section pt-14">
-      <div class="container">
+    {{ $banner := . }}
+    {{ $bg := or (index $banner "background-image") $banner.background_image }}
+
+    <section class="section pt-14 relative overflow-hidden min-h-[70vh] flex items-center">
+      {{ with $bg }}
+        <!-- Background image layer (no inline styles, CSP-safe) -->
+        <div class="absolute inset-0 z-0">
+          {{ partial "image" (dict
+            "Src" .
+            "Alt" "Banner background"
+            "Class" "w-full h-full object-cover"
+            "DisplayXL" "1600x"
+            "DisplayLG" "1000x"
+            "DisplayMD" "900x"
+          ) }}
+          <!-- Optional soft overlay for readability -->
+          <div class="absolute inset-0 bg-white/60 dark:bg-black/40 pointer-events-none"></div>
+        </div>
+      {{ end }}
+
+      <div class="container relative z-10">
         <div class="row justify-center">
           <div class="lg:col-7 md:col-9 mb-8 text-center">
             <h1 class="mb-4 text-h3 lg:text-h1">
-              {{ .title | markdownify }}
+              {{ $banner.title | markdownify }}
             </h1>
             <p class="mb-8">
-              {{ .content | markdownify }}
+              {{ $banner.content | markdownify }}
             </p>
-            {{ with .button }}
+            {{ with $banner.button }}
               {{ if .enable }}
                 <a
                   class="btn btn-primary"
                   href="{{ .link | absURL }}"
-                  {{ if strings.HasPrefix .link `http` }}
-                    target="_blank" rel="noopener"
-                  {{ end }}>
-                  {{ .label }}
-                  <i class="fa fa-arrow-right pl-2"></i>
+                  {{ if strings.HasPrefix .link `http` }}target="_blank" rel="noopener"{{ end }}>
+                  {{ .label }} <i class="fa fa-arrow-right pl-2"></i>
                 </a>
               {{ end }}
             {{ end }}
-          </div>
-          <div class="col-12">
-            {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto lg:!max-w-[800px]" "DisplayXL" "800x" ) }}
           </div>
         </div>
       </div>

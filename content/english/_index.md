@@ -3,7 +3,7 @@
 banner:
   title: "Welcome"
   content: "**Our Goal:** To facilitate scientific and social networks among graduate students and post doctoral fellows of the M. H. Mohseni Urologic Science (MIUS) Research Centre. "
-  image: "/images/MIUS-banner.png"
+  background-image: "/images/vancouver_wallpaper.jpg"
   button:
     enable: true
     label: "About Us"
