@@ -58,6 +58,12 @@ url = "/committee_resources"
 weight = 4
 
 
+[[main]]
+name = "Contact"
+url = "/contact"
+weight = 5
+
+
 # footer menu
 [[footer]]
 name = "About"
@@ -85,3 +91,9 @@ weight = 3
 name = "Privacy Policy"
 url = "/privacy-policy"
 weight = 4
+
+
+[[footer]]
+name = "Contact"
+url = "/contact"
+weight = 5
