@@ -1,13 +1,63 @@
 {{ define "main" }}
-  <section class="section-sm">
-    <div class="container">
-      <div class="row justify-center">
-        <div class="md:col-10 lg:col-7 text-center">
-          {{ partial "image" (dict "Src" .Params.image "Context" .Page "Alt" .Title "Class" "mx-auto mb-6" "Size" "200x200") }}
-          <h2 class="h3 mb-6">{{ .Title }}</h2>
-          <div class="content">{{ .Content }}</div>
-        </div>
+{{ $page := . }}
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-center">
+      <div class="md:col-10 lg:col-7 text-center">
+        {{ partial "image" (dict "Src" .Params.image "Context" .Page "Alt" .Title "Class" "mx-auto mb-6" "Size"
+        "200x200") }}
+        <h2 class="h3 mb-6">{{ .Title }}</h2>
+        <div class="content">{{ .Content }}</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+{{ with .Params.members }}
+<section class="section pt-0">
+  <div class="container">
+    {{ with $.Params.members_title }}
+    <h3 class="h4 text-center mb-12">{{ . }}</h3>
+    {{ end }}
+    <div class="row">
+      {{ range . }}
+      {{ $name := or .name .Name }}
+      {{ $role := or .role .Role }}
+      {{ $bio := or .description .Description }}
+      {{ $image := or .image .Image }}
+      <div class="md:col-6 lg:col-4 mb-14">
+        <div class="bg-light dark:bg-darkmode-light rounded-xl p-8 h-full text-center shadow">
+          {{ if $image }}
+          {{ with $image }}
+          {{ $img := or (resources.Get .) ($page.Resources.GetMatch (printf "*%s*" .)) }}
+          {{ with $img }}
+          {{ $cropped := .Fill "400x400 center" }}
+          <div class="mx-auto mb-6 h-48 w-48 overflow-hidden rounded-xl shadow">
+            <img src="{{ $cropped.RelPermalink }}" alt="{{ $name | default " Committee member" }}"
+              class="h-full w-full object-cover" />
+          </div>
+          {{ end }}
+          {{ end }}
+          {{ else if $name }}
+          <div
+            class="mx-auto mb-6 flex h-32 w-32 items-center justify-center rounded-full bg-light dark:bg-darkmode-body text-4xl font-semibold text-primary">
+            {{ upper (slicestr $name 0 1) }}
+          </div>
+          {{ end }}
+          {{ with $name }}
+          <h4 class="mb-2">{{ . }}</h4>
+          {{ end }}
+          {{ with $role }}
+          <p class="text-primary font-semibold mb-4">{{ . }}</p>
+          {{ end }}
+          {{ with $bio }}
+          <p class="text-sm text-text">{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 {{ end }}
