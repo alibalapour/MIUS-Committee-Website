@@ -13,17 +13,17 @@ banner:
 features:
   - title: "Resources"
     image: "/images/resources-icon-home.png"
-    content: "[Placeholder for resources]"
+    content: "Explore committee-curated guides that support every aspect of trainee life, from funding to wellness."
     bulletpoints:
-      - "[Placeholder]"
-      - "[Placeholder]"
-      - "[Placeholder]"
-      - "[Placeholder]"
-      - "[Placeholder]"
+      - "Funding and budgeting guidance tailored to MIUS trainees"
+      - "Healthcare and mental wellness services available across BC"
+      - "Practical checklists and contacts for day-to-day logistics"
+      - "Links to official university and provincial programs"
+      - "Regularly updated insights from fellow researchers"
     button:
       enable: true
       label: "Resources"
-      link: "#"
+      link: "committee_resources/"
 
   - title: "Events"
     image: "/images/events-icon-home.png"
