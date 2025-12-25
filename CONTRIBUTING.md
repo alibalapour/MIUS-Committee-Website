@@ -40,14 +40,14 @@ Copy and paste this template into the file editor:
 ```markdown
 ---
 title: "Your Resource Title Here"
-date: YYYY-MM-DD
+date: YYYY-MM-DD (e.g., 2024-01-15)
 location: "MIUS, Vancouver"
 summary: "A short one-sentence description of your resource"
 cover: "cover.jpg"
 tags: ["Your Category"]
 ---
 
-**Last Update:** Month DD, YYYY
+**Last Update:** Month DD, YYYY (e.g., Jan 15, 2024)
 
 **Summary:** Write a longer description of your resource here. Explain what information it contains and who it's for. This can be 2-3 sentences.
 
@@ -86,9 +86,10 @@ If you want to add a cover image to make your resource more visually appealing:
 2. Go back to your resource folder (e.g., `committee_resources/your-resource-name/`)
 3. Click **"Add file"** → **"Upload files"**
 4. Drag and drop your image or click to browse
-5. Name your image file `cover.jpg` or update the `cover:` line in your `index.md` to match your image name
-6. Add a commit message like "Add cover image"
-7. Commit to the same branch you created earlier
+5. **Option A:** Name your image file `cover.jpg` to match the template
+6. **Option B:** If you use a different name (like `my-image.png`), update the `cover:` line in your `index.md` file to match (e.g., `cover: "my-image.png"`)
+7. Add a commit message like "Add cover image"
+8. Commit to the same branch you created earlier
 
 ## ✏️ Editing Existing Resources
 
