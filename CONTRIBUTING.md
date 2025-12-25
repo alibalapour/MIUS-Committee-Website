@@ -40,14 +40,14 @@ Copy and paste this template into the file editor:
 ```markdown
 ---
 title: "Your Resource Title Here"
-date: 2025-12-25
+date: YYYY-MM-DD
 location: "MIUS, Vancouver"
 summary: "A short one-sentence description of your resource"
 cover: "cover.jpg"
 tags: ["Your Category"]
 ---
 
-**Last Update:** Dec 25, 2025
+**Last Update:** Month DD, YYYY
 
 **Summary:** Write a longer description of your resource here. Explain what information it contains and who it's for. This can be 2-3 sentences.
 
@@ -59,9 +59,9 @@ You can access the complete document with this [link](https://your-link-here.com
 Replace the placeholder text with your information:
 
 - **Title**: The name of your resource (e.g., "Student Housing Resources")
-- **Date**: Today's date in format YYYY-MM-DD (e.g., 2025-12-25)
+- **Date**: Today's date in format YYYY-MM-DD (e.g., 2024-01-15)
 - **Summary** (at the top): One short sentence (appears on cards)
-- **Last Update**: Today's date in readable format (e.g., Dec 25, 2025)
+- **Last Update**: Today's date in readable format (e.g., Jan 15, 2024)
 - **Summary** (in the body): A longer description (2-3 sentences)
 - **Link**: The URL to your full resource document
 - **Tags**: A category name in brackets, like `["Housing"]` or `["Financial Support"]`
@@ -117,14 +117,14 @@ Here's what a real resource looks like:
 ```markdown
 ---
 title: "Financial Aid Resources"
-date: 2025-12-25
+date: 2024-01-15
 location: "MIUS, Vancouver"
 summary: "Information about financial support for international students"
 cover: "cover.jpg"
 tags: ["Financial Aid"]
 ---
 
-**Last Update:** Dec 25, 2025
+**Last Update:** Jan 15, 2024
 
 **Summary:** This resource provides information about financial aid options available to international students at UBC, including scholarships, bursaries, work-study programs, and emergency funding. It covers eligibility requirements and application processes.
 
