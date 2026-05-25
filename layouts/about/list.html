@@ -1,0 +1,49 @@
+{{ define "main" }}
+  {{ $page := . }}
+  <section class="mius-page-hero">
+    <div class="container">
+      <p class="mius-eyebrow">About</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Content }}
+        <div class="mius-page-hero__copy">{{ . }}</div>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ with .Params.members }}
+    <section class="mius-section mius-members">
+      <div class="container">
+        {{ with $.Params.members_title }}
+          <div class="mius-section-heading">
+            <p class="mius-eyebrow">People</p>
+            <h2>{{ . }}</h2>
+          </div>
+        {{ end }}
+        <div class="mius-member-grid">
+          {{ range . }}
+            {{ $name := or .name .Name }}
+            {{ $role := or .role .Role }}
+            {{ $bio := or .description .Description }}
+            {{ $image := or .image .Image }}
+            <article class="mius-member-card">
+              {{ if $image }}
+                {{ $img := or (resources.Get $image) ($page.Resources.GetMatch (printf "*%s*" $image)) }}
+                {{ with $img }}
+                  {{ $cropped := .Fill "520x420 center" }}
+                  <img class="mius-member-card__image" src="{{ $cropped.RelPermalink }}" alt="{{ $name | default "Committee member" }}" />
+                {{ end }}
+              {{ else }}
+                <div class="mius-member-card__fallback">{{ upper (slicestr $name 0 1) }}</div>
+              {{ end }}
+              <div class="mius-member-card__body">
+                {{ with $role }}<p class="mius-role-pill">{{ . }}</p>{{ end }}
+                {{ with $name }}<h3>{{ . }}</h3>{{ end }}
+                {{ with $bio }}<p class="mius-member-card__bio">{{ . }}</p>{{ end }}
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

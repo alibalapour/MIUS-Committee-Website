@@ -2,10 +2,8 @@
 title: "Run Club"
 date: 2025-05-01
 location: "MIUS, Vancouver"
-summary: "..."
-# Choose a hero/cover image from this bundle for cards or social previews:
+summary: "A casual wellness activity for trainees who want to get outside, move together, and connect outside the lab."
 cover: "01.jpg"
-# Optional: tags/categories
-tags: ["Sport"]
+tags: ["Wellness", "Social"]
 ---
-...
+Run Club brings trainees together for a low-pressure outdoor activity focused on movement, wellness, and conversation outside the usual research setting.

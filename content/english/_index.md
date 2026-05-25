@@ -1,13 +1,13 @@
 ---
 # Banner
 banner:
-  title: "Welcome"
-  content: "**Our Goal:** To facilitate scientific and social networks among graduate students and post doctoral fellows of the M. H. Mohseni Urologic Science (MIUS) Research Centre. "
+  title: "MIUS Trainee Committee"
+  content: "Connecting graduate students and postdoctoral fellows through practical resources, trainee-led events, and peer support across the M. H. Mohseni Urologic Sciences Research Centre."
   background-image: "/images/vancouver_wallpaper.jpg"
   button:
     enable: true
     label: "About Us"
-    link: "#"  # TODO
+    link: "about/"
 
 # Features
 features:
@@ -27,14 +27,14 @@ features:
 
   - title: "Events"
     image: "/images/events-icon-home.png"
-    content: "[Placeholder]"
+    content: "Join workshops, informal meetups, wellness activities, and community gatherings planned for MIUS trainees."
     bulletpoints:
-      - "[Placeholder]"
-      - "[Placeholder]"
-      - "[Placeholder]"
+      - "Trainee networking and social events"
+      - "Workshops that support research and career growth"
+      - "Community activities that make it easier to connect"
     button:
       enable: true
       label: "Events"
-      link: "#"
+      link: "events/"
 
 ---

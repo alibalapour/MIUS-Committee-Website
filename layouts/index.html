@@ -1,0 +1,89 @@
+{{ define "main" }}
+  {{ with .Params.banner }}
+    {{ $banner := . }}
+    {{ $bg := or (index $banner "background-image") $banner.background_image }}
+    <section class="mius-hero">
+      {{ with $bg }}
+        <div class="mius-hero__media">
+          {{ partial "image" (dict
+            "Src" .
+            "Alt" "Vancouver skyline"
+            "Class" "mius-hero__image"
+            "DisplayXL" "1800x"
+            "DisplayLG" "1200x"
+            "DisplayMD" "900x"
+          ) }}
+        </div>
+      {{ end }}
+      <div class="mius-hero__overlay"></div>
+      <div class="container mius-hero__content">
+        <p class="mius-eyebrow">M. H. Mohseni Urologic Sciences Research Centre</p>
+        <h1>{{ $banner.title | markdownify }}</h1>
+        <p class="mius-hero__lede">{{ $banner.content | markdownify }}</p>
+        <div class="mius-hero__actions">
+          {{ with $banner.button }}
+            {{ if .enable }}
+              <a
+                class="btn btn-primary mius-btn"
+                href="{{ .link | relLangURL }}"
+                {{ if strings.HasPrefix .link `http` }}target="_blank" rel="noopener"{{ end }}>
+                {{ .label }} <i class="fa fa-arrow-right pl-2"></i>
+              </a>
+            {{ end }}
+          {{ end }}
+          <a class="mius-link-button" href="{{ `events/` | relLangURL }}">View Events</a>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  <section class="mius-section mius-intro">
+    <div class="container">
+      <div class="mius-card-grid">
+        <a class="mius-action-card" href="{{ `committee_resources/` | relLangURL }}">
+          <span class="mius-card-icon"><i class="fa fa-book-open"></i></span>
+          <h3>Resources</h3>
+          <p>Practical guidance for settlement, health coverage, wellness, funding, and day-to-day trainee logistics.</p>
+        </a>
+        <a class="mius-action-card" href="{{ `events/` | relLangURL }}">
+          <span class="mius-card-icon"><i class="fa fa-calendar-days"></i></span>
+          <h3>Events</h3>
+          <p>Workshops, social activities, and informal gatherings that make it easier to meet other trainees.</p>
+        </a>
+        <a class="mius-action-card" href="{{ `about/` | relLangURL }}">
+          <span class="mius-card-icon"><i class="fa fa-users"></i></span>
+          <h3>Committee</h3>
+          <p>Meet the trainees coordinating resources, programming, and community support across MIUS.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {{ range $i, $e := .Params.features }}
+    <section class="mius-feature-band {{ if (modBool $i 2) }}mius-feature-band--tint{{ end }}">
+      <div class="container">
+        <div class="mius-feature {{ if (modBool $i 2) }}mius-feature--reverse{{ end }}">
+          <div class="mius-feature__visual">
+            {{ partial "image" (dict "Src" .image "Alt" .title "Class" "mius-feature__image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+          </div>
+          <div class="mius-feature__copy">
+            <p class="mius-eyebrow">{{ .title | markdownify }}</p>
+            <h2>{{ .content | markdownify }}</h2>
+            <ul class="mius-check-list">
+              {{ range .bulletpoints }}
+                <li><i class="fa fa-check"></i><span>{{ . | markdownify }}</span></li>
+              {{ end }}
+            </ul>
+            {{ with .button }}
+              {{ if .enable }}
+                <a class="btn btn-primary mius-btn" href="{{ .link | relLangURL }}">
+                  {{ .label }} <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

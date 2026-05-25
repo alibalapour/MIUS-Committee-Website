@@ -1,0 +1,32 @@
+<footer class="mius-footer">
+  <div class="container">
+    <div class="mius-footer__main">
+      <a class="mius-footer__brand" href="{{ site.Home.RelPermalink }}">
+        {{ partial "logo" }}
+      </a>
+      <p>Resources, events, and peer support for MIUS graduate students and postdoctoral fellows.</p>
+      <nav class="mius-footer__nav" aria-label="Footer">
+        {{ range site.Menus.footer }}
+          <a
+            {{ if findRE `^http` .URL }}
+              target="_blank" rel="noopener"
+            {{ end }}
+            href="{{ if findRE `^#` .URL }}
+              {{ if not $.IsHome }}
+                {{ site.Home.RelPermalink }}
+              {{ end }}{{ .URL }}
+            {{ else }}
+              {{ .URL | relLangURL }}
+            {{ end }}">
+            {{ .Name }}
+          </a>
+        {{ end }}
+      </nav>
+    </div>
+  </div>
+  <div class="mius-footer__bottom">
+    <div class="container">
+      <p>{{ site.Params.copyright | markdownify }}</p>
+    </div>
+  </div>
+</footer>

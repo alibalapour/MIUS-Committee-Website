@@ -2,11 +2,9 @@
 title: "LDAV-VPC Gathering 2025"
 date: 2025-07-18
 location: "MIUS, Vancouver"
-summary: "..."
-# Choose a hero/cover image from this bundle for cards or social previews:
+summary: "A cross-group gathering for MIUS, VPC, and LDAV trainees to meet peers, exchange research interests, and build community."
 cover: "01.jpg"
-# Optional: tags/categories
-tags: ["...", "Industry"]
+tags: ["Community", "Networking"]
 ---
 
-We hosted a ...
+We hosted an informal trainee gathering to help members of the MIUS, VPC, and LDAV communities meet one another, share research interests, and build stronger peer networks across groups.

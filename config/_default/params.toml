@@ -6,12 +6,12 @@ logo = "images/mius_logo_vertical.png"
 logo_darkmode = "images/mius_logo_vertical.png"
 # use `px` or `x` with logo_width, example: "100px".
 # Note: logo_width is not work with .svg file
-logo_width = "80px"
-logo_height = "32px"
+logo_width = "96px"
+logo_height = "72px"
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
-logo_text = "Hugoplate"
+logo_text = "MIUS Trainee Committee"
 # navbar fixed to top
 navbar_fixed = true
 # theme-mode
@@ -27,7 +27,7 @@ google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
 # copyright
-copyright = "Designed and Developed based on [Hugoplate](https://github.com/zeon-studio/hugoplate) Template"
+copyright = "MIUS Trainee Committee"
 
 # Preloader
 # preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
@@ -62,10 +62,10 @@ content = "You must replace the **baseURL** in **hugo.toml** file when deploying
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["Boilerplate", "Hugo"]
-description = "Hugo & Tailwindcss Starter"
-author = "zeon.studio"
-twitter = "zeon_studio"
+keywords = ["MIUS", "trainee committee", "urologic sciences", "graduate students", "postdoctoral fellows"]
+description = "Resources, events, and committee updates for MIUS trainees."
+author = "MIUS Trainee Committee"
+twitter = ""
 image = "images/og-image.png"
 
 

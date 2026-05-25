@@ -1,6 +1,4 @@
 ---
 title: "Resources"
-menu:
-  main:
-    weight: 30
+description: "Committee-curated guidance for trainee life, settlement, health coverage, wellness, and practical logistics."
 ---
