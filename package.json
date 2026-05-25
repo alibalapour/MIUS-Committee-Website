@@ -28,6 +28,7 @@
     "tailwindcss": "^4.1.6"
   },
   "optionalDependencies": {
-    "@parcel/watcher-darwin-arm64": "npm:null@*"
+    "@parcel/watcher-darwin-arm64": "2.5.1",
+    "@parcel/watcher-linux-x64-glibc": "2.5.1"
   }
 }

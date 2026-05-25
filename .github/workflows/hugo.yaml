@@ -54,7 +54,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
       - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        run: npm install
+      - name: Install Parcel watcher binary
+        run: npm install @parcel/watcher-linux-x64-glibc@2.5.1 --no-save --no-package-lock
       - name: Cache Restore
         id: cache-restore
         uses: actions/cache/restore@v5
