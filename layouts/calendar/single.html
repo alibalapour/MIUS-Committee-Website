@@ -6,60 +6,15 @@
       {{ with .Params.description }}
         <p class="mius-page-hero__copy">{{ . | markdownify }}</p>
       {{ end }}
-      {{ if .Content }}<div class="mius-page-hero__small">{{ .Content }}</div>{{ end }}
+      {{ if .Content }}
+        <div class="mius-page-hero__small">{{ .Content }}</div>
+      {{ end }}
     </div>
   </section>
 
-  <!-- Event Calendar Widget Section -->
   <section class="mius-section mius-events-calendar">
     <div class="container">
       {{ partial "event-calendar.html" . }}
-    </div>
-  </section>
-
-  <!-- Event List Section Below Calendar -->
-  <section class="mius-section mius-events">
-    <div class="container">
-      <h2>All Events</h2>
-      <div class="mius-event-grid">
-        {{ range .Site.GetPage "section" "events" }}
-          {{ range .Pages.ByDate.Reverse }}
-            {{ $event := . }}
-            {{ $cover := "" }}
-            {{ with .Params.cover }}
-              {{ with $event.Resources.GetMatch . }}{{ $cover = .RelPermalink }}{{ end }}
-            {{ end }}
-            {{ if not $cover }}
-              {{ with .Resources.ByType "image" }}{{ if . }}{{ $cover = (index . 0).RelPermalink }}{{ end }}{{ end }}
-            {{ end }}
-            <article class="mius-event-card">
-              {{ if $cover }}
-                <a href="{{ .RelPermalink }}" class="mius-event-card__image-link">
-                  {{ partial "image" (dict "Src" $cover "Alt" .Title "Class" "mius-event-card__image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
-                </a>
-              {{ else }}
-                <a href="{{ .RelPermalink }}" class="mius-event-card__placeholder" aria-label="{{ .Title }}">
-                  <span>{{ with .Date }}{{ .Format "Jan" }}{{ end }}</span>
-                  <strong>{{ with .Date }}{{ .Format "02" }}{{ end }}</strong>
-                </a>
-              {{ end }}
-              <div class="mius-event-card__body">
-                <div class="mius-event-card__meta">
-                  {{ with .Date }}<span>{{ .Format "Jan 2, 2006" }}</span>{{ end }}
-                  {{ with .Params.location }}<span>{{ . }}</span>{{ end }}
-                </div>
-                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
-                {{ with .Params.tags }}
-                  <div class="mius-tag-row">
-                    {{ range . }}<span>{{ . }}</span>{{ end }}
-                  </div>
-                {{ end }}
-              </div>
-            </article>
-          {{ end }}
-        {{ end }}
-      </div>
     </div>
   </section>
 {{ end }}
