@@ -16,7 +16,7 @@
         {{- $weeks := div (sub $until.Unix $start.Unix) 604800 -}}
 
         {{- range seq 0 $weeks -}}
-          {{- $eventDate := $start.AddDate 0 0 (mul . 7) -}}
+          {{- $eventDate := $start.AddDate 0 0 (int (mul . 7)) -}}
           {{- $event := dict
             "date" ($eventDate.Format "2006-01-02")
             "title" $.Title
