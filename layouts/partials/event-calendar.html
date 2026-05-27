@@ -1,4 +1,4 @@
-{{- /* 
+{{- /*
   Event Calendar Partial
   Displays an interactive monthly calendar with event highlighting and linking
   Usage: {{ partial "event-calendar.html" . }}
@@ -6,23 +6,33 @@
 
 {{- $events := slice -}}
 
-{{- /* Collect all events from the events section */ -}}
-{{- $eventsSection := .Site.GetPage "section" "events" -}}
+{{- $eventsSection := site.GetPage "section" "events" -}}
+
 {{- if $eventsSection -}}
-  {{- range $eventsSection.Pages.ByDate.Reverse -}}
-    {{- $event := dict
-      "date" (.Date.Format "2006-01-02")
-      "title" .Title
-      "url" .RelPermalink
-    -}}
-    {{- $events = $events | append $event -}}
+  {{- range $eventsSection.RegularPagesRecursive.ByDate -}}
+    {{- if not .Draft -}}
+      {{- $event := dict
+        "date" (.Date.Format "2006-01-02")
+        "title" .Title
+        "url" .RelPermalink
+        "location" (.Params.location | default "")
+      -}}
+      {{- $events = $events | append $event -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
-{{- /* Embed event data as JavaScript */ -}}
-<script type="text/javascript">
-  window.eventData = {{ jsonify $events }};
+<script>
+  window.eventData = {{ $events | jsonify | safeJS }};
 </script>
 
-{{- /* Calendar container */ -}}
 <div id="event-calendar" class="event-calendar-container"></div>
+
+{{- $calendarJS := resources.Get "js/calendar.js" -}}
+{{- if $calendarJS -}}
+  <script src="{{ $calendarJS.RelPermalink }}" defer></script>
+{{- else -}}
+  <script>
+    console.error("Calendar JS file not found at assets/js/calendar.js");
+  </script>
+{{- end -}}
