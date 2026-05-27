@@ -7,4 +7,4 @@ cover: "01.jpg"
 tags: ["Community", "Networking"]
 ---
 
-We hosted an informal trainee gathering to help members of the MIUS, VPC, and LDAV communities meet one another, share research interests, and build stronger peer networks across groups.
+"We hosted an informal trainee gathering to help members of the MIUS, VPC, and LDAV communities meet one another, share research interests, and build stronger peer networks across groups."
