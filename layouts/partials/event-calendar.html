@@ -9,13 +9,33 @@
 {{- if $eventsSection -}}
   {{- range $eventsSection.RegularPagesRecursive.ByDate -}}
     {{- if not .Draft -}}
-      {{- $event := dict
-        "date" (.Date.Format "2006-01-02")
-        "title" .Title
-        "url" .RelPermalink
-        "location" (.Params.location | default "")
-      -}}
-      {{- $events = $events | append $event -}}
+
+      {{- if and .Params.recurring (eq .Params.recurrence "weekly") .Params.recurrence_until -}}
+        {{- $start := .Date -}}
+        {{- $until := time .Params.recurrence_until -}}
+        {{- $weeks := div (sub $until.Unix $start.Unix) 604800 -}}
+
+        {{- range seq 0 $weeks -}}
+          {{- $eventDate := $start.AddDate 0 0 (mul . 7) -}}
+          {{- $event := dict
+            "date" ($eventDate.Format "2006-01-02")
+            "title" $.Title
+            "url" $.RelPermalink
+            "location" ($.Params.location | default "")
+          -}}
+          {{- $events = $events | append $event -}}
+        {{- end -}}
+
+      {{- else -}}
+        {{- $event := dict
+          "date" (.Date.Format "2006-01-02")
+          "title" .Title
+          "url" .RelPermalink
+          "location" (.Params.location | default "")
+        -}}
+        {{- $events = $events | append $event -}}
+      {{- end -}}
+
     {{- end -}}
   {{- end -}}
 {{- end -}}
