@@ -67,7 +67,7 @@ members:
     image: "/images/members/avatar.png"
   - name: "Sarah Hanstock"
     role: "Social Committee"
-    description: "I joined Dr. Dirk Lange's lab in 2021 as a PhD student in Experimental Medicine. My research investigates the role of the gut micorbiome in calcium oxalate kidney stone disease. I am member of the Social Committee in the MUIS Trainee Committee, and help with planning and facilitating various social events. I look forward to how these can further strengthen the sense of community and friendships within MIUS. Outside of the lab I love to take advantage of every non-rainy Vancouver day by playing beach volleyball, hiking, or ocean swimming, but also love to bake and cook on gloomier days!"
+    description: "I joined Dr. Dirk Lange's lab in 2021 as a PhD student in Experimental Medicine. My research investigates the role of the gut micorbiome in calcium oxalate kidney stone disease. I am member of the Social Committee in the MUIS Trainee Committee, and help with planning and facilitating various social events. Outside of the lab I love to take advantage of every non-rainy Vancouver day by playing beach volleyball, hiking, or ocean swimming, but also love to bake and cook on gloomier days!"
     image: "/images/members/Sarah.jpg"
 draft: false
 ---
