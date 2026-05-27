@@ -11,7 +11,7 @@ members:
     image: "/images/members/Shabnam.jpg"
     - name: "Unnati Yagnik"
     role: "Co-Chair"
-    description:
+    description: ""
     image: "/images/members/avatar.png"
   - name: "Ka Mun Nip"
     role: "Co-chair of Professional Development Committee"
@@ -19,7 +19,7 @@ members:
     image: "/images/members/avatar.png"
     - name: "Sally Lee"
     role: "Co-Chair of Professional Development Committee"
-    description:
+    description: ""
     image: "/images/members/avatar.png"
   - name: "Sudha S Kotapalli"
     role: "Co-chair of Professional Development and Resource Committees"
