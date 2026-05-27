@@ -18,7 +18,7 @@ members:
     description: "Ka Mun Nip is the Co-head of Dialogue and a Research Assistant in the Nappi Lab within the Department of Experimental Medicine."
     image: "/images/members/avatar.png"
   - name: "Sally Lee"
-    role: "Co-Chair"
+    role: "Co-Chair of Professional Development Comittee"
     description: ""
     image: "/images/members/avatar.png"
   - name: "Sudha S Kotapalli"
