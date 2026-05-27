@@ -5,6 +5,7 @@ location: "Robert H. N. Ho"
 summary: "Research Day followed by Networking Social"
 cover: "01.jpg"
 tags: ["Research Day", "Social"]
+draft: false
 ---
 
 "UBC Department of Urologic Sciences and the Vancouver Prostate Centre organise the Annual Lorne D. Sullivan Lectureship and Research Day. This event will feature research presentations by both clinicians and research scientists covering a broad range of multidisciplenary urological topcis. A keynote presentation will be given by Professor Caroline Moore, NIHR Research professor and Head of Urology, UCL. 
