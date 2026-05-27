@@ -1,5 +1,5 @@
 ---
-title: "VCHRI Trainee career Day"
+title: "VCHRI Trainee Career Day"
 date: 2026-06-05 
 location: "Blusson Spinal Cord Centre"
 summary: "Trainee Career Day"
