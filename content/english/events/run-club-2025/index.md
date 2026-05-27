@@ -1,7 +1,7 @@
 ---
 title: "Run Club"
 dates: 2026-05-01 
-location: "In front of RHNH at 5PM"
+location: "Robert H. N. Ho"
 summary: "Weekly Wednesday Run Club"
 cover: "01.jpg"
 tags: ["Wellness", "Social"]
