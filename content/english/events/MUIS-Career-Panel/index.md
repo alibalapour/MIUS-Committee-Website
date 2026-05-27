@@ -1,6 +1,6 @@
 ---
 title: "MUIS Career Panel"
-date: 202-10-22
+date: 2026-10-22
 location: "Location TBD"
 summary: "Career Panel with industry professionals"
 cover: "01.jpg"
