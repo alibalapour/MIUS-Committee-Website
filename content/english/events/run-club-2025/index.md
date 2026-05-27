@@ -1,5 +1,5 @@
 ---
-title: "Run Club"
+title: "MIUS Run Club"
 date: 2026-05-13 
 location: "Robert H. N. Ho"
 summary: "Weekly Wednesday Run Club"
