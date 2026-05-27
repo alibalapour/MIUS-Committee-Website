@@ -6,14 +6,17 @@
 
 {{- $events := slice -}}
 
-{{- /* Collect all events and convert their data to JSON format */ -}}
-{{- range .Pages.ByDate.Reverse -}}
-  {{- $event := dict
-    "date" (.Date.Format "2006-01-02")
-    "title" .Title
-    "url" .RelPermalink
-  -}}
-  {{- $events = $events | append $event -}}
+{{- /* Collect all events from the events section */ -}}
+{{- $eventsSection := .Site.GetPage "section" "events" -}}
+{{- if $eventsSection -}}
+  {{- range $eventsSection.Pages.ByDate.Reverse -}}
+    {{- $event := dict
+      "date" (.Date.Format "2006-01-02")
+      "title" .Title
+      "url" .RelPermalink
+    -}}
+    {{- $events = $events | append $event -}}
+  {{- end -}}
 {{- end -}}
 
 {{- /* Embed event data as JavaScript */ -}}
