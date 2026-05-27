@@ -1,6 +1,5 @@
 ---
-title: "Events Calendar"
-description: "Browse upcoming and past events on our interactive calendar"
+title: "Calendar"
+description: "View upcoming MIUS Trainee Committee events."
+draft: false
 ---
-
-View all MIUS committee events on this interactive calendar. Click on any event to see full details.
