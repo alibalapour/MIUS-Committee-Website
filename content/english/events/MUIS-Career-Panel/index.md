@@ -1,7 +1,7 @@
 ---
 title: "MUIS Career Panel"
 date: 2025-10-22
-location: "TBD"
+location: "Location TBD"
 summary: "Career Panel with industry professionals"
 cover: "01.jpg"
 tags: ["Community", "Networking"]
