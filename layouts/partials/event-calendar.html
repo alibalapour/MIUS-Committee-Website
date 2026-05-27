@@ -11,17 +11,18 @@
     {{- if not .Draft -}}
 
       {{- if and .Params.recurring (eq .Params.recurrence "weekly") .Params.recurrence_until -}}
+        {{- $page := . -}}
         {{- $start := .Date -}}
         {{- $until := time .Params.recurrence_until -}}
         {{- $weeks := div (sub $until.Unix $start.Unix) 604800 -}}
-
+      
         {{- range seq 0 $weeks -}}
           {{- $eventDate := $start.AddDate 0 0 (int (mul . 7)) -}}
           {{- $event := dict
             "date" ($eventDate.Format "2006-01-02")
-            "title" $.Title
-            "url" $.RelPermalink
-            "location" ($.Params.location | default "")
+            "title" $page.Title
+            "url" $page.RelPermalink
+            "location" ($page.Params.location | default "")
           -}}
           {{- $events = $events | append $event -}}
         {{- end -}}
