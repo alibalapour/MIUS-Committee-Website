@@ -1,4 +1,9 @@
 {{ define "main" }}
+  {{ $calendarCSS := resources.Get "css/calendar.css" }}
+  {{ if $calendarCSS }}
+    <link rel="stylesheet" href="{{ $calendarCSS.RelPermalink }}">
+  {{ end }}
+
   <section class="mius-page-hero">
     <div class="container">
       <p class="mius-eyebrow">Calendar</p>
