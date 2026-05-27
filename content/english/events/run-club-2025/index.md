@@ -1,9 +1,9 @@
 ---
 title: "Run Club"
 date: 2025-05-01
-location: "MIUS, Vancouver"
-summary: "A casual wellness activity for trainees who want to get outside, move together, and connect outside the lab."
+location: "In front of RHNH at 5PM"
+summary: "Weekly Wednesday Run Club"
 cover: "01.jpg"
 tags: ["Wellness", "Social"]
 ---
-Run Club brings trainees together for a low-pressure outdoor activity focused on movement, wellness, and conversation outside the usual research setting.
+The VPC is hosting a weekly run club every Wednesday at 5pm. We meet in front of the RHNH building at 4:55pm and go for a 5k run at a pace of 6-6:30min/km. Join us to fraternize with your colleagues in a sporty setting!
