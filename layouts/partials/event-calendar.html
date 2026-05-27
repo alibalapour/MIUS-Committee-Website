@@ -1,0 +1,25 @@
+{{- /* 
+  Event Calendar Partial
+  Displays an interactive monthly calendar with event highlighting and linking
+  Usage: {{ partial "event-calendar.html" . }}
+*/ -}}
+
+{{- $events := slice -}}
+
+{{- /* Collect all events and convert their data to JSON format */ -}}
+{{- range .Pages.ByDate.Reverse -}}
+  {{- $event := dict
+    "date" (.Date.Format "2006-01-02")
+    "title" .Title
+    "url" .RelPermalink
+  -}}
+  {{- $events = $events | append $event -}}
+{{- end -}}
+
+{{- /* Embed event data as JavaScript */ -}}
+<script type="text/javascript">
+  window.eventData = {{ jsonify $events }};
+</script>
+
+{{- /* Calendar container */ -}}
+<div id="event-calendar" class="event-calendar-container"></div>
