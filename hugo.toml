@@ -24,7 +24,7 @@ defaultContentLanguageInSubdir = false
 ID = 'G-MEASUREMENT_ID' # see https://gohugo.io/templates/internal/#configure-google-analytics
 
 [services.disqus]
-shortname = 'themefisher-template' # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+shortname = 'themefisher-template' # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-[...]
 
 ########################## Permalinks ############################
 [permalinks.page]
@@ -131,6 +131,9 @@ lazy = true
 [[params.plugins.css]]
 link = "plugins/font-awesome/v6/icons.css"
 lazy = true
+[[params.plugins.css]]
+link = "css/calendar.css"
+lazy = true
 
 # JS Plugins
 [[params.plugins.js]]
@@ -160,3 +163,6 @@ lazy = true
 [[params.plugins.js]]
 link = "plugins/youtube-lite.js"
 lazy = true
+[[params.plugins.js]]
+link = "js/calendar.js"
+lazy = false
