@@ -53,6 +53,12 @@ weight = 3
 
 
 [[main]]
+name = "Calendar"
+url = "/calendar"
+weight = 3.5
+
+
+[[main]]
 name = "Resources"
 url = "/committee_resources"
 weight = 4
@@ -74,6 +80,12 @@ weight = 1
 # name = "Elements"
 # url = "/elements"
 # weight = 2
+
+
+[[footer]]
+name = "Calendar"
+url = "/calendar"
+weight = 2.5
 
 
 [[footer]]
