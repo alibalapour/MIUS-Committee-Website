@@ -19,10 +19,11 @@ class EventCalendar {
   }
 
   render() {
-    this.container.innerHTML = '';
-    const calendarHTML = this.generateCalendarHTML();
-    this.container.innerHTML = calendarHTML;
-  }
+  this.container.innerHTML = '';
+  const calendarHTML = this.generateCalendarHTML();
+  this.container.innerHTML = calendarHTML;
+  this.attachEventListeners();
+}
 
   generateCalendarHTML() {
     const monthName = new Date(this.selectedYear, this.selectedMonth).toLocaleString('default', { month: 'long', year: 'numeric' });
