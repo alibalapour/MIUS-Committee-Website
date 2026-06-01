@@ -335,11 +335,13 @@ main {
 .mius-member-card__image,
 .mius-member-card__fallback {
   width: 100%;
-  height: 250px;
+  height: 280px;
 }
 
 .mius-member-card__image {
-  object-fit: cover;
+  background: linear-gradient(135deg, rgba(223, 238, 233, 0.9), rgba(248, 251, 250, 0.95));
+  object-fit: contain;
+  object-position: center;
 }
 
 .mius-member-card__fallback {

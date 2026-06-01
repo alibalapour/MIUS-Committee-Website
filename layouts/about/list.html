@@ -29,8 +29,7 @@
               {{ if $image }}
                 {{ $img := or (resources.Get $image) ($page.Resources.GetMatch (printf "*%s*" $image)) }}
                 {{ with $img }}
-                  {{ $cropped := .Fill "520x420 center" }}
-                  <img class="mius-member-card__image" src="{{ $cropped.RelPermalink }}" alt="{{ $name | default "Committee member" }}" />
+                  <img class="mius-member-card__image" src="{{ .RelPermalink }}" alt="{{ $name | default "Committee member" }}" />
                 {{ end }}
               {{ else }}
                 <div class="mius-member-card__fallback">{{ upper (slicestr $name 0 1) }}</div>
