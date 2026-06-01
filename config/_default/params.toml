@@ -15,8 +15,8 @@ logo_text = "MIUS Trainee Committee"
 # navbar fixed to top
 navbar_fixed = true
 # theme-mode
-theme_switcher = true
-theme_default = "system" # available options [light/dark/system]
+theme_switcher = false
+theme_default = "light" # dark mode is disabled for this site
 # Main Sections
 mainSections = ["blog"]
 # contact form action
