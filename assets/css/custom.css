@@ -10,10 +10,22 @@
   --mius-white: #ffffff;
 }
 
+html {
+  min-height: 100%;
+  background: #edf5f2;
+}
+
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   background:
     linear-gradient(180deg, rgba(248, 251, 250, 0.65), rgba(248, 251, 250, 0) 360px),
     var(--mius-paper);
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .header {
