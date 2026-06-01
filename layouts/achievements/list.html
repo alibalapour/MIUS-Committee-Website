@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <section class="mius-page-hero">
+    <div class="container">
+      <p class="mius-eyebrow">Recognition</p>
+      <h1>{{ .Title | markdownify }}</h1>
+      {{ with .Params.description }}
+        <p class="mius-page-hero__copy">{{ . | markdownify }}</p>
+      {{ end }}
+      {{ if .Content }}<div class="mius-page-hero__small">{{ .Content }}</div>{{ end }}
+    </div>
+  </section>
+
+  <section class="mius-section mius-achievements">
+    <div class="container">
+      <div class="mius-achievement-list">
+        {{ range .Params.achievements }}
+          <article class="mius-achievement-card">
+            {{ with .date }}<p class="mius-achievement-card__date">{{ . }}</p>{{ end }}
+            {{ with .title }}<h2>{{ . }}</h2>{{ end }}
+            {{ with .person }}<p class="mius-achievement-card__person">{{ . }}</p>{{ end }}
+            {{ with .summary }}<p>{{ . }}</p>{{ end }}
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

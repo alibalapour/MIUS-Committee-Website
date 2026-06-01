@@ -51,6 +51,11 @@ name = "Events"
 url = "/events"
 weight = 3
 
+[[main]]
+name = "Achievements"
+url = "/achievements"
+weight = 3.25
+
 
 [[main]]
 name = "Calendar"

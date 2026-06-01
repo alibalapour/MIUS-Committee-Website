@@ -393,6 +393,10 @@ main {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.mius-event-section + .mius-event-section {
+  margin-top: 84px;
+}
+
 .mius-event-card {
   display: grid;
   grid-template-columns: 172px minmax(0, 1fr);
@@ -458,6 +462,14 @@ main {
   padding: 5px 10px;
 }
 
+.mius-empty-state {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--mius-muted);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
 .mius-contact {
   padding-top: 24px;
 }
@@ -489,6 +501,51 @@ main {
 .mius-contact-card a {
   color: var(--mius-blue);
   font-weight: 800;
+}
+
+.mius-achievements {
+  padding-top: 24px;
+}
+
+.mius-achievement-list {
+  display: grid;
+  max-width: 980px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.mius-achievement-card {
+  padding: 28px;
+  border: 1px solid rgba(16, 47, 76, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18px 50px rgba(16, 47, 76, 0.08);
+}
+
+.mius-achievement-card__date {
+  margin: 0 0 8px;
+  color: var(--mius-teal);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.mius-achievement-card h2 {
+  margin: 0 0 10px;
+  color: var(--mius-ink);
+  font-size: 1.55rem;
+}
+
+.mius-achievement-card__person {
+  margin: 0 0 12px;
+  color: var(--mius-blue);
+  font-weight: 800;
+}
+
+.mius-achievement-card p:last-child {
+  margin-bottom: 0;
+  color: var(--mius-muted);
+  line-height: 1.7;
 }
 
 .mius-footer {

@@ -12,41 +12,50 @@
 
   <section class="mius-section mius-events">
     <div class="container">
-      <div class="mius-event-grid">
-        {{ range .Pages.ByDate.Reverse }}
-          {{ $event := . }}
-          {{ $cover := "" }}
-          {{ with .Params.cover }}
-            {{ with $event.Resources.GetMatch . }}{{ $cover = .RelPermalink }}{{ end }}
-          {{ end }}
-          {{ if not $cover }}
-            {{ with .Resources.ByType "image" }}{{ if . }}{{ $cover = (index . 0).RelPermalink }}{{ end }}{{ end }}
-          {{ end }}
-          <article class="mius-event-card">
-            {{ if $cover }}
-              <a href="{{ .RelPermalink }}" class="mius-event-card__image-link">
-                {{ partial "image" (dict "Src" $cover "Alt" .Title "Class" "mius-event-card__image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
-              </a>
-            {{ else }}
-              <a href="{{ .RelPermalink }}" class="mius-event-card__placeholder" aria-label="{{ .Title }}">
-                <span>{{ with .Date }}{{ .Format "Jan" }}{{ end }}</span>
-                <strong>{{ with .Date }}{{ .Format "02" }}{{ end }}</strong>
-              </a>
+      {{ $today := now.Format "2006-01-02" }}
+      {{ $upcomingEvents := slice }}
+      {{ $pastEvents := slice }}
+      {{ range .Pages.ByDate }}
+        {{ $eventEnd := .Date.Format "2006-01-02" }}
+        {{ if and .Params.recurring .Params.recurrence_until }}
+          {{ $eventEnd = (time .Params.recurrence_until).Format "2006-01-02" }}
+        {{ end }}
+        {{ if ge $eventEnd $today }}
+          {{ $upcomingEvents = $upcomingEvents | append . }}
+        {{ else }}
+          {{ $pastEvents = $pastEvents | append . }}
+        {{ end }}
+      {{ end }}
+
+      <div class="mius-event-section">
+        <div class="mius-section-heading">
+          <p class="mius-eyebrow">Next Up</p>
+          <h2>Upcoming Events</h2>
+        </div>
+        {{ if $upcomingEvents }}
+          <div class="mius-event-grid">
+            {{ range $upcomingEvents }}
+              {{ partial "event-card.html" . }}
             {{ end }}
-            <div class="mius-event-card__body">
-              <div class="mius-event-card__meta">
-                {{ with .Date }}<span>{{ .Format "Jan 2, 2006" }}</span>{{ end }}
-                {{ with .Params.location }}<span>{{ . }}</span>{{ end }}
-              </div>
-              <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-              {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
-              {{ with .Params.tags }}
-                <div class="mius-tag-row">
-                  {{ range . }}<span>{{ . }}</span>{{ end }}
-                </div>
-              {{ end }}
-            </div>
-          </article>
+          </div>
+        {{ else }}
+          <p class="mius-empty-state">No upcoming events are listed yet.</p>
+        {{ end }}
+      </div>
+
+      <div class="mius-event-section">
+        <div class="mius-section-heading">
+          <p class="mius-eyebrow">Archive</p>
+          <h2>Past Events</h2>
+        </div>
+        {{ if $pastEvents }}
+          <div class="mius-event-grid">
+            {{ range sort $pastEvents "Date" "desc" }}
+              {{ partial "event-card.html" . }}
+            {{ end }}
+          </div>
+        {{ else }}
+          <p class="mius-empty-state">Past events will appear here after they have taken place.</p>
         {{ end }}
       </div>
     </div>

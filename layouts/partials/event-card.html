@@ -1,0 +1,38 @@
+{{ $event := . }}
+{{ $cover := "" }}
+{{ with $event.Params.cover }}
+  {{ with $event.Resources.GetMatch . }}{{ $cover = .RelPermalink }}{{ end }}
+{{ end }}
+{{ if not $cover }}
+  {{ with $event.Resources.ByType "image" }}{{ if . }}{{ $cover = (index . 0).RelPermalink }}{{ end }}{{ end }}
+{{ end }}
+
+<article class="mius-event-card">
+  {{ if $cover }}
+    <a href="{{ $event.RelPermalink }}" class="mius-event-card__image-link">
+      {{ partial "image" (dict "Src" $cover "Alt" $event.Title "Class" "mius-event-card__image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+    </a>
+  {{ else }}
+    <a href="{{ $event.RelPermalink }}" class="mius-event-card__placeholder" aria-label="{{ $event.Title }}">
+      <span>{{ with $event.Date }}{{ .Format "Jan" }}{{ end }}</span>
+      <strong>{{ with $event.Date }}{{ .Format "02" }}{{ end }}</strong>
+    </a>
+  {{ end }}
+  <div class="mius-event-card__body">
+    <div class="mius-event-card__meta">
+      {{ if and $event.Params.recurring $event.Params.recurrence_until }}
+        <span>{{ $event.Date.Format "Jan 2, 2006" }} - {{ (time $event.Params.recurrence_until).Format "Jan 2, 2006" }}</span>
+      {{ else }}
+        {{ with $event.Date }}<span>{{ .Format "Jan 2, 2006" }}</span>{{ end }}
+      {{ end }}
+      {{ with $event.Params.location }}<span>{{ . }}</span>{{ end }}
+    </div>
+    <h2><a href="{{ $event.RelPermalink }}">{{ $event.Title }}</a></h2>
+    {{ with $event.Params.summary }}<p>{{ . }}</p>{{ end }}
+    {{ with $event.Params.tags }}
+      <div class="mius-tag-row">
+        {{ range . }}<span>{{ . }}</span>{{ end }}
+      </div>
+    {{ end }}
+  </div>
+</article>
