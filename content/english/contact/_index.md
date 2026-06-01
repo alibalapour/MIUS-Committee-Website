@@ -1,6 +1,7 @@
 ---
 title: "Contact"
 meta_title: ""
-description: "this is meta description"
+description: "Contact the MIUS Trainee Committee."
+email: "XXX"
 draft: false
 ---
