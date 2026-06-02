@@ -15,7 +15,7 @@ members:
     image: "/images/members/Unnati.jpg"
   - name: "Ka Mun Nip"
     role: "Co-chair of Professional Development Committee"
-    description: "Ka Mun Nip is the Co-head of Dialogue and a Research Assistant in the Nappi Lab within the Department of Experimental Medicine."
+    description: "My research focuses on studying miRNAs in patients with germ cell tumors and investigating the molecular mechanisms underlying prostate cancer treatment resistance and progression. As a member of the MIUS Trainee Committee, I established a mentorship program with the Professional Development team."
     image: "/images/members/KaMun.png"
   - name: "Sally Lee-Sayer"
     role: "Co-Chair of Professional Development Comittee"
