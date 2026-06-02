@@ -38,7 +38,7 @@ members:
     description: "I joined the VPC in 2018 as a visiting high school student in Dr. Amina Zoubeidi's lab and have continued as a graduate student studying lineage plasticity in neuroendocrine prostate cancer."
     image: "/images/members/avatar.png"
   - name: "Ali Balapour"
-    role: "Website Designer"
+    role: "Website Designer + Resource Committee Member"
     description: "I joined the Hach Lab in VPC in 2023 as a Master’s student in Bioinformatics and began my PhD in Computer Science in 2025. My research focuses on developing artificial intelligence and machine learning algorithms for medical image analysis. Since January 2025, I have also been a member of the MIUS Trainee Committee, where I contribute to the design and development of the committee’s website."
     image: "/images/members/Ali.jpg"
   - name: "Naomi Jung"
