@@ -20,7 +20,7 @@ members:
   - name: "Sally Lee-Sayer"
     role: "Co-Chair of Professional Development Comittee"
     description: "My research background is in immunology, spectializing in flow cytomometric immunophenotyping and assays, and mouse models. I have several years of industry R&D experience in gene delivery, vaccine development, and antibody drug discovery, and then joined the Roberts Lab as a Research Associate in 2024.  I am passionate about bringing people together to share experiences, skills and perspective, and to foster a supportive environment for professional growth. Outside of the lab, I have many hobbies and interests, including sewing (and teaching people how to sew), making miniatures (1/24 scale furniture), rock climbing, and travelling."
-    image: "/images/members/avatar.png"
+    image: "/images/members/Sally.jpg"
   - name: "Sudha S Kotapalli"
     role: "Co-chair of Professional Development and Resource Committees"
     description: "I joined VPC in 2018 as a PhD student in the Daugaard Lab. I studied epigenetic and chromatin-driven transcriptional regulation of molecular markers in luminal muscle-invasive bladder cancer."
