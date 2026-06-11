@@ -19,7 +19,7 @@ members:
     image: "/images/members/KaMun.png"
   - name: "Sally Lee-Sayer"
     role: "Co-Chair of Professional Development Comittee"
-    description: "I joined the Roberts Lab in 2024 as a research associate. My research background is in immunology, spectializing in flow cytomometric immunophenotyping and assays, and mouse models. I also have several years of industry R&D experience in gene delivery, vaccine development, and antibody drug discovery. I am passionate about bringing people together to sharing useful skills and experiences to foster a supportive environment for professional growth. Outside of the lab, I have many hobbies and interests, including sewing (and teaching people how to sew), miniatures (1/24 scale furniture), rock climbing, and travelling."
+    description: "My research background is in immunology, spectializing in flow cytomometric immunophenotyping and assays, and mouse models. I have several years of industry R&D experience in gene delivery, vaccine development, and antibody drug discovery, and then joined the Roberts Lab as a Research Associate in 2024.  I am passionate about bringing people together to share experiences, skills and perspective, and to foster a supportive environment for professional growth. Outside of the lab, I have many hobbies and interests, including sewing (and teaching people how to sew), making miniatures (1/24 scale furniture), rock climbing, and travelling."
     image: "/images/members/avatar.png"
   - name: "Sudha S Kotapalli"
     role: "Co-chair of Professional Development and Resource Committees"
