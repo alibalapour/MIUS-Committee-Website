@@ -60,7 +60,7 @@ members:
   - name: "Kareena Kak"
     role: "Professional Development Committee"
     description: "I am a co-op student in Dr. Gillian Vandekerkhove's lab. My research focuses on utDNA profiling in urothelial cancer, including diagnosis, monitoring, and treatment response tracking."
-    image: "/images/members/avatar.png"
+    image: "/images/members/Kareena.jpg"
   - name: "Jan Vanwelkenhuyzen"
     role: "Social Committee"
     description: "In 2025 I joined the Wyatt lab in the VPC as a post-doc. My research focuses on the development of (epi)genomic and transcriptomic biomarker development in liquid biopsy samples in metastatic prostate cancer. Outside of work I try and discover all the hidden gems of BC either by running, hiking, biking or (backcountry) snowboarding. I share my passion for running with the VPC by organizing the weekly VPC run club!"
