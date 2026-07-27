@@ -56,7 +56,7 @@ members:
   - name: "Rafailia Beta"
     role: "Professional Development Committee"
     description: "I joined VPC in 2025 as a postdoctoral fellow in Nada Lallous' lab to study lncRNA of AR condensates in prostate cancer. I contribute to knowledge sharing, mentorship, and career development initiatives."
-    image: "/images/members/avatar.png"
+    image: "/images/members/Rafailia.jpg"
   - name: "Kareena Kak"
     role: "Professional Development Committee"
     description: "I am a co-op student in Dr. Gillian Vandekerkhove's lab. My research focuses on utDNA profiling in urothelial cancer, including diagnosis, monitoring, and treatment response tracking."
