@@ -3,7 +3,7 @@ title: "MIUS Run Club"
 date: 2026-05-13 
 location: "Robert H. N. Ho"
 summary: "Weekly Wednesday Run Club"
-cover: "01.jpg"
+cover: "assets/images/gallery/RunClub1.jpg"
 tags: ["Wellness", "Social"]
 draft: false
 
