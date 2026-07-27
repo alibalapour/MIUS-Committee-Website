@@ -1,16 +1,19 @@
 {{ $event := . }}
 {{ $cover := "" }}
 {{ with $event.Params.cover }}
-  {{ with $event.Resources.GetMatch . }}{{ $cover = .RelPermalink }}{{ end }}
+  {{ $cover = . }}
+  {{ if and (not (strings.HasPrefix $cover "http")) (not (fileExists (add `assets/` (string $cover)))) (not (fileExists (add `static/` (string $cover)))) }}
+    {{ if not ($event.Resources.GetMatch $cover) }}{{ $cover = "" }}{{ end }}
+  {{ end }}
 {{ end }}
 {{ if not $cover }}
-  {{ with $event.Resources.ByType "image" }}{{ if . }}{{ $cover = (index . 0).RelPermalink }}{{ end }}{{ end }}
+  {{ with $event.Resources.ByType "image" }}{{ if . }}{{ $cover = (index . 0).Name }}{{ end }}{{ end }}
 {{ end }}
 
 <article class="mius-event-card">
   {{ if $cover }}
     <a href="{{ $event.RelPermalink }}" class="mius-event-card__image-link">
-      {{ partial "image" (dict "Src" $cover "Alt" $event.Title "Class" "mius-event-card__image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+      {{ partial "image" (dict "Src" $cover "Context" $event "Alt" $event.Title "Class" "mius-event-card__image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
     </a>
   {{ else }}
     <a href="{{ $event.RelPermalink }}" class="mius-event-card__placeholder" aria-label="{{ $event.Title }}">
