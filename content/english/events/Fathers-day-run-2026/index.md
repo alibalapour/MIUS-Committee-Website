@@ -3,7 +3,7 @@ title: "PCFC Father's Day Run/Walk"
 date: 2026-06-21
 location: "Burnaby Lake Sports Complex"
 summary: "Charity Run/Walk"
-cover: ["FDRW1.JPG", "FDRW2.JPG"]
+cover: "FDRW1.JPG"
 tags: ["Community", "Fundraising", "Fitness"]
 draft: false
 ---
