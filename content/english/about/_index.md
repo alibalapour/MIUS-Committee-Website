@@ -7,23 +7,23 @@ members_title: "Committee Members"
 members:
   - name: "Shabnam Massah"
     role: "Co-Chair"
-    description: "I joined the VPC in 2018 as a PostDoctoral Fellow and have focused my work on understanding prostate cancer progression, particularly through the study of AR-V7 condensates and their role in disease mechanisms.I am excited to serve as co-chair of this committee and look forward to helping create a positive and rewarding experience for all trainees."
+    description: "I joined the VPC in 2018 as a PostDoctoral Fellow and have focused my work on understanding prostate cancer progression, particularly through the study of AR-V7 condensates and their[...]
     image: "/images/members/Shabnam.jpg"
   - name: "Unnati Yagnik"
     role: "Co-Chair"
-    description: "I joined VPC in 2024 as a Master’s student in Dr. Syam Somasekharan’s lab, where I study the osteomimetic properties of prostate cancer cells and their role in driving bone metastasis. I am grateful for the opportunity to serve as Co-Chair of this committee and look forward to expanding the accessibility and range of support available to trainees at the center."
+    description: "I joined VPC in 2024 as a Master's student in Dr. Syam Somasekharan's lab, where I study the osteomimetic properties of prostate cancer cells and their role in driving bone metas[...]
     image: "/images/members/Unnati.jpg"
   - name: "Ka Mun Nip"
     role: "Co-chair of Professional Development Committee"
-    description: "My research focuses on studying miRNAs in patients with germ cell tumors and investigating the molecular mechanisms underlying prostate cancer treatment resistance and progression. As a member of the MIUS Trainee Committee, I established a mentorship program with the Professional Development team."
+    description: "My research focuses on studying miRNAs in patients with germ cell tumors and investigating the molecular mechanisms underlying prostate cancer treatment resistance and progression. A[...]
     image: "/images/members/KaMun.png"
   - name: "Sally Lee-Sayer"
     role: "Co-Chair of Professional Development Comittee"
-    description: "My research background is in immunology, spectializing in flow cytomometric immunophenotyping and assays, and mouse models. I have several years of industry R&D experience in gene delivery, vaccine development, and antibody drug discovery, and then joined the Roberts Lab as a Research Associate in 2024.  I am passionate about bringing people together to share experiences, skills and perspective, and to foster a supportive environment for professional growth. Outside of the lab, I have many hobbies and interests, including sewing (and teaching people how to sew), making miniatures (1/24 scale furniture), rock climbing, and travelling."
+    description: "My research background is in immunology, spectializing in flow cytomometric immunophenotyping and assays, and mouse models. I have several years of industry R&D experience in gene de[...]
     image: "/images/members/Sally.jpg"
   - name: "Sudha S Kotapalli"
     role: "Co-chair of Professional Development and Resource Committees"
-    description: "I joined VPC in 2018 as a PhD student in the Daugaard Lab. I studied epigenetic and chromatin-driven transcriptional regulation of molecular markers in luminal muscle-invasive bladder cancer."
+    description: "I joined VPC in 2018 as a PhD student in the Daugaard Lab. I studied epigenetic and chromatin-driven transcriptional regulation of molecular markers in luminal muscle-invasive bladde[...]
     image: "/images/members/Sudha.jpg"
   - name: "Sarina Saffarian"
     role: "Co-chair of Resource Committee"
@@ -31,23 +31,23 @@ members:
     image: "/images/members/Sarina.jpg"
   - name: "Nicholas Pinette"
     role: "Co-chair of Social Committee"
-    description: "I am a laboratory technician in Dr. Nada Lallous's lab at the Vancouver Prostate Centre, where I study androgen receptor biomolecular condensates in prostate cancer. My research combines molecular biology, microscopy, and computational analysis."
+    description: "I am a laboratory technician in Dr. Nada Lallous's lab at the Vancouver Prostate Centre, where I study androgen receptor biomolecular condensates in prostate cancer. My research comb[...]
     image: "/images/members/Nicholas.jpg"
   - name: "Ishana Lodhia"
     role: "Co-chair of Social Committee"
-    description: "I joined the VPC in 2018 as a visiting high school student in Dr. Amina Zoubeidi's lab and have continued as a graduate student studying lineage plasticity in neuroendocrine prostate cancer."
+    description: "I joined the VPC in 2018 as a visiting high school student in Dr. Amina Zoubeidi's lab and have continued as a graduate student studying lineage plasticity in neuroendocrine prostate[...]
     image: "/images/members/Ishana.jpg"
   - name: "Ali Balapour"
     role: "Website Designer + Resource Committee Member"
-    description: "I joined the Hach Lab in VPC in 2023 as a Master’s student in Bioinformatics and began my PhD in Computer Science in 2025. My research focuses on developing artificial intelligence and machine learning algorithms for medical image analysis. Since January 2025, I have also been a member of the MIUS Trainee Committee, where I contribute to the design and development of the committee’s website."
+    description: "I joined the Hach Lab in VPC in 2023 as a Master's student in Bioinformatics and began my PhD in Computer Science in 2025. My research focuses on developing artificial intelligence[...]
     image: "/images/members/Ali.jpg"
   - name: "Naomi Jung"
     role: "Past Co-Chair"
-    description: "I joined the VPC in 2022 as a co-op student and have since focused my research on applying high-resolution imaging techniques to study prostate cancer and bone metastasis. I am excited to serve as co-chair of this committee and look forward to helping enhance the trainee experience for all."
+    description: "I joined the VPC in 2022 as a co-op student and have since focused my research on applying high-resolution imaging techniques to study prostate cancer and bone metastasis. I am excit[...]
     image: "/images/members/Naomi.jpg"
   - name: "Kerim Yavuz"
     role: "Past co-chair of Resources Committee"
-    description: "I joined VPC in 2022 as a PhD student in Dr. Nathan Lack's laboratory and am working on the role of androgen receptor's coregulators in the progression of prostate cancer. I am serving as the co-head of resources subgroup of VPC Trainee Committee."
+    description: "I joined VPC in 2022 as a PhD student in Dr. Nathan Lack's laboratory and am working on the role of androgen receptor's coregulators in the progression of prostate cancer. I am servi[...]
     image: "/images/members/Kerim.jpg"
   - name: "Andrew Murtha"
     role: "Social Committee"
@@ -55,21 +55,23 @@ members:
     image: "/images/members/AndyMurtha.jpg"
   - name: "Rafailia Beta"
     role: "Professional Development Committee"
-    description: "I joined VPC in 2025 as a postdoctoral fellow in Nada Lallous' lab to study lncRNA of AR condensates in prostate cancer. I contribute to knowledge sharing, mentorship, and career development initiatives."
+    description: "I joined VPC in 2025 as a postdoctoral fellow in Nada Lallous' lab to study lncRNA of AR condensates in prostate cancer. I contribute to knowledge sharing, mentorship, and career dev[...]
     image: "/images/members/Rafailia.jpg"
   - name: "Kareena Kak"
     role: "Professional Development Committee"
-    description: "I am a co-op student in Dr. Gillian Vandekerkhove's lab. My research focuses on utDNA profiling in urothelial cancer, including diagnosis, monitoring, and treatment response tracking."
+    description: "I am a co-op student in Dr. Gillian Vandekerkhove's lab. My research focuses on utDNA profiling in urothelial cancer, including diagnosis, monitoring, and treatment response tracking[...]
     image: "/images/members/Kareena.jpg"
   - name: "Jan Vanwelkenhuyzen"
     role: "Social Committee"
-    description: "In 2025 I joined the Wyatt lab in the VPC as a post-doc. My research focuses on the development of (epi)genomic and transcriptomic biomarker development in liquid biopsy samples in metastatic prostate cancer. Outside of work I try and discover all the hidden gems of BC either by running, hiking, biking or (backcountry) snowboarding. I share my passion for running with the VPC by organizing the weekly VPC run club!"
+    description: "In 2025 I joined the Wyatt lab in the VPC as a post-doc. My research focuses on the development of (epi)genomic and transcriptomic biomarker development in liquid biopsy samples in m[...]
     image: "/images/members/avatar.png"
   - name: "Sarah Hanstock"
     role: "Social Committee"
-    description: "I joined Dr. Dirk Lange's lab in 2021 as a PhD student in Experimental Medicine. My research investigates the role of the gut micorbiome in calcium oxalate kidney stone disease. I am member of the Social Committee in the MUIS Trainee Committee, and help with planning and facilitating various social events. Outside of the lab I love to take advantage of every non-rainy Vancouver day by playing beach volleyball, hiking, or ocean swimming, but also love to bake and cook on gloomier days!"
+    description: "I joined Dr. Dirk Lange's lab in 2021 as a PhD student in Experimental Medicine. My research investigates the role of the gut micorbiome in calcium oxalate kidney stone disease. I am[...]
     image: "/images/members/Sarah.jpg"
 draft: false
 ---
+
+![MIUS Committee Group Photo](/images/gallery/group.JPG)
 
 The MIUS Trainee Committee supports graduate students and postdoctoral fellows by coordinating useful resources, community events, and peer-to-peer connections across the research centre.
