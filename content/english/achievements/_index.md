@@ -15,7 +15,7 @@ achievements:
     person: "Trainee Name"
     date: "Month Year"
     summary: "Use this space for conference presentations, invited talks, posters, or research highlights."
-draft: false
+draft: true
 ---
 
 We celebrate the accomplishments of MIUS trainees across research, professional development, service, and community leadership.
