@@ -2,6 +2,6 @@
 title: "Contact"
 meta_title: ""
 description: "Contact the MIUS Trainee Committee."
-email: "XXX"
+email: "miustraineecommittee@gmail.com"
 draft: false
 ---
