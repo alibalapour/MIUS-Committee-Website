@@ -11,9 +11,13 @@ draft: false
 Are you a co-op or transitioning student looking to showcase your research? Join us for the first-ever MIUS Undergraduate Research Symposium on August 14th from 9am-12pm at Dimond Health Care Centre, where undergraduate researchers showcase their research through 5-minute presentations. This is a chance: 
  
 For Undergraduate/Transitioning Students: 
+
 🌟 Share what you've been working on with other students and researchers
+
 🗣️ Build your presentation and communication skills
+
 🏅Add valuable experience to your CV and have your abstract published under the Canadian Journal of Undergraduate Research
+
 🤝 Meet fellow students who are passionate about research
  
 
