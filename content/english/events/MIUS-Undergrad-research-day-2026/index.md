@@ -27,4 +27,4 @@ For Undergraduate/Transitioning Students:
 
 You don’t need to have published your work or have a “perfect” project. We would love to learn about what you have explored, learned, or troubleshooted during your research journey at VPC. 
  
-Interested? Simply complete the sign-up form (Link) by July 31. Initial submission is to confirm your participation and requires only a working title – an abstract and presentation will be due A
+Interested? Simply complete the sign-up form (Link) by July 31. Initial submission is to confirm your participation and requires only a working title – an abstract and presentation will be due August 10th, and abstract publication is encouraged but optional. Please contact miustraineecommittee@gmail.com if you have any questions or concerns.
