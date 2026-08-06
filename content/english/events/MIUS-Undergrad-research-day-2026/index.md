@@ -9,7 +9,7 @@ draft: false
 ---
 
 ## Symposium Schedule
-📄 [Download the MIUS Undergraduate Research Symposium Schedule](/pdfs/MIUS_undergrad_Schedule.pdf)
+📄 [Download the MIUS Undergraduate Research Symposium Schedule](https://drive.google.com/file/d/1UpoC4dPSm6Mw3uf8GkH_MYR7lxqxIR2D/view?usp=sharing)
 
 
 ## Abstract submission
@@ -28,4 +28,4 @@ For Undergraduate/Transitioning Students:
 
 You don’t need to have published your work or have a “perfect” project. We would love to learn about what you have explored, learned, or troubleshooted during your research journey at VPC. 
  
-Interested? Simply complete the sign-up form (Link) by July 31. Initial submission is to confirm your participation and requires only a working title – an abstract and presentation will be due August 10th, and abstract publication is encouraged but optional. Please contact miustraineecommittee@gmail.com if you have any questions or concerns.
+Interested? Simply complete the sign-up form [Link](https://docs.google.com/forms/d/e/1FAIpQLSdV3mxKEhQ2w9t1cnO9LVBEx8b1shZwzGaDzQ50oBleSHyh2w/viewform) by July 31. Initial submission is to confirm your participation and requires only a working title – an abstract and presentation will be due August 10th, and abstract publication is encouraged but optional. Please contact miustraineecommittee@gmail.com if you have any questions or concerns.
