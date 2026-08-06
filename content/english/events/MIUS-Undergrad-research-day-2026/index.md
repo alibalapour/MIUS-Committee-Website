@@ -8,11 +8,11 @@ tags: ["Networking", "Research Day"]
 draft: false
 ---
 
-📄 [Download the MIUS Undergraduate Research Symposium Schedule](/pdfs/MIUS Undergraduate Research Symposium Schedule.pdf)
+📄 [Download the MIUS Undergraduate Research Symposium Schedule](static/pdfs/MIUS_undergrad_Schedule.pdf)
 
 
 ## Abstract submission
-Are you a co-op or transitioning student looking to showcase your research? Join us for the first-ever MIUS Undergraduate Research Symposium on August 14th from 9am-12pm at Dimond Health Care Centre, where undergraduate researchers showcase their research through 5-minute presentations. This is a chance: 
+Are you a co-op or transitioning student looking to showcase your research? Join us for the first-ever MIUS Undergraduate Research Symposium on August 14th from 9am-12pm at Diamond Health Care Centre, where undergraduate researchers showcase their research through 5-minute presentations. This is a chance: 
  
 For Undergraduate/Transitioning Students: 
 
