@@ -9,7 +9,7 @@ draft: false
 ---
 
 ## Symposium Schedule
-📄 [Download the MIUS Undergraduate Research Symposium Schedule](/static/pdfs/MIUS_undergrad_Schedule.pdf)
+📄 [Download the MIUS Undergraduate Research Symposium Schedule](/pdfs/MIUS_undergrad_Schedule.pdf)
 
 
 ## Abstract submission
