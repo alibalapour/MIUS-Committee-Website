@@ -8,7 +8,7 @@ tags: ["Networking", "Research Day"]
 draft: false
 ---
 
-## Event Schedule
+## Symposium Schedule
 📄 [Download the MIUS Undergraduate Research Symposium Schedule](/static/pdfs/MIUS_undergrad_Schedule.pdf)
 
 
