@@ -8,8 +8,8 @@ tags: ["Networking", "Research Day"]
 draft: false
 ---
 
-## Symposium Schedule
-📄 [Download the MIUS Undergraduate Research Symposium Schedule](https://drive.google.com/file/d/1UpoC4dPSm6Mw3uf8GkH_MYR7lxqxIR2D/view?usp=sharing)
+## Symposium Schedule and Abstracts
+📄 [Download the MIUS Undergraduate Research Symposium Schedule and Abstracts](https://drive.google.com/file/d/18TedMMEg27Fx8mH8wvl_HgALMnFmEYoD/view?usp=sharing)
 
 
 ## Abstract submission
