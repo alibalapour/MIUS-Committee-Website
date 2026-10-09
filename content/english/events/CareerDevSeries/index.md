@@ -1,6 +1,6 @@
 ---
 title: "MIUS Career Development Series (Ian Richmond)"
-date: 2026-10-19
+date: 2026-10-19T12:30:00Z
 location: "Diamond Health Care Centre DHCC 1020"
 summary: "Career development series"
 cover: "20261019_MIUSspeaker_poster.jpeg"
