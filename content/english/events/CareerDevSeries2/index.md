@@ -3,7 +3,7 @@ title: "MIUS Career Development Series (Rebecca Dirnfeld)"
 date: 2026-11-02 12:30PM
 location: "Diamond Health Care Centre DHCC 1020"
 summary: "Career development series"
-cover: "20261019_MIUSspeaker_poster.jpeg"
+cover: "20261102_MIUSspeaker_poster_v3.jpeg"
 tags: ["Career Development", "Networking"]
 draft: false
 
