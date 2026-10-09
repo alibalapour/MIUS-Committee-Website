@@ -3,7 +3,7 @@ title: "Fall Mixer"
 date: 2026-10-09T16:30:00Z
 location: "RHNH Atrium"
 summary: "Fall Mixer"
-cover: "01.jpg"
+cover: "fall_mixer.jpeg"
 tags: ["Social"]
 draft: false
 ---
