@@ -70,7 +70,7 @@ weight = 4
 
 [[main]]
 name = "Mentorship"
-url = "/mentorship"
+url = "/Mentorship"
 weight = 4.25
 
 [[main]]
