@@ -1,60 +1,41 @@
-        <p class="mius-hero__lede">{{ $banner.content | markdownify }}</p>
-        <div class="mius-hero__actions">
-          {{ with $banner.button }}
-            {{ if .enable }}
-              <a
-                class="btn btn-primary mius-btn"
-                href="{{ .link | relLangURL }}"
-                {{ if strings.HasPrefix .link `http` }}target="_blank" rel="noopener"{{ end }}>
-                {{ .label }} <i class="fa fa-arrow-right pl-2"></i>
-              </a>
-            {{ end }}
-          {{ end }}
+{{ define "main" }}
+  <!-- Banner -->
+  {{ with .Params.banner }}
+    {{ $banner := . }}
+    {{ $bg := or (index $banner "background-image") $banner.background_image }}
+
+    <section class="section pt-14 relative overflow-hidden min-h-[70vh] flex items-center">
+      {{ with $bg }}
+        <!-- Background image layer (no inline styles, CSP-safe) -->
+        <div class="absolute inset-0 z-0">
+          {{ partial "image" (dict
+            "Src" .
+            "Alt" "Banner background"
+            "Class" "w-full h-full object-cover"
+            "DisplayXL" "1600x"
+            "DisplayLG" "1000x"
+            "DisplayMD" "900x"
+          ) }}
+          <!-- Optional soft overlay for readability -->
+          <div class="absolute inset-0 bg-white/60 dark:bg-black/40 pointer-events-none"></div>
         </div>
-      </div>
-    </section>
-  {{ end }}
+      {{ end }}
 
-  <section class="mius-section mius-intro">
-    <div class="container">
-      <div class="mius-card-grid">
-        <a class="mius-action-card" href="{{ `committee_resources/` | relLangURL }}">
-          <span class="mius-card-icon"><i class="fa fa-book-open"></i></span>
-          <h3>Resources</h3>
-          <p>Practical guidance for settlement, health coverage, wellness, funding, and day-to-day trainee logistics.</p>
-        </a>
-        <a class="mius-action-card" href="{{ `calendar/` | relLangURL }}">
-          <span class="mius-card-icon"><i class="fa fa-calendar-days"></i></span>
-          <h3>Calendar</h3>
-          <p>View upcoming committee events, workshops, and trainee activities in one calendar.</p>
-        </a>
-        <a class="mius-action-card" href="{{ `Mentorship/` | relLangURL }}">
-          <span class="mius-card-icon"><i class="fa fa-user-graduate"></i></span>
-          <h3>Mentorship</h3>
-          <p>A place to provide support and mentorship to MIUS trainees.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  {{ range $i, $e := .Params.features }}
-    <section class="mius-feature-band {{ if (modBool $i 2) }}mius-feature-band--tint{{ end }}">
-      <div class="container">
-        <div class="mius-feature {{ if (modBool $i 2) }}mius-feature--reverse{{ end }}">
-          <div class="mius-feature__visual">
-            {{ partial "image" (dict "Src" .image "Alt" .title "Class" "mius-feature__image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
-          </div>
-          <div class="mius-feature__copy">
-            <p class="mius-eyebrow">{{ .title | markdownify }}</p>
-            <h2>{{ .content | markdownify }}</h2>
-            <ul class="mius-check-list">
-              {{ range .bulletpoints }}
-                <li><i class="fa fa-check"></i><span>{{ . | markdownify }}</span></li>
-              {{ end }}
-            </ul>
-            {{ with .button }}
+      <div class="container relative z-10">
+        <div class="row justify-center">
+          <div class="lg:col-7 md:col-9 mb-8 text-center">
+            <h1 class="mb-4 text-h3 lg:text-h1">
+              {{ $banner.title | markdownify }}
+            </h1>
+            <p class="mb-8">
+              {{ $banner.content | markdownify }}
+            </p>
+            {{ with $banner.button }}
               {{ if .enable }}
-                <a class="btn btn-primary mius-btn" href="{{ .link | relLangURL }}">
+                <a
+                  class="btn btn-primary"
+                  href="{{ .link | absURL }}"
+                  {{ if strings.HasPrefix .link `http` }}target="_blank" rel="noopener"{{ end }}>
                   {{ .label }} <i class="fa fa-arrow-right pl-2"></i>
                 </a>
               {{ end }}
@@ -64,4 +45,113 @@
       </div>
     </section>
   {{ end }}
+  <!-- /Banner -->
+
+  <!-- Features -->
+  {{ range $i, $e:= .Params.features }}
+    <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
+      <div class="container">
+        <div class="row items-center justify-between">
+          <div
+            class="mb:md-0 {{ if not (modBool $i 2) }}
+              md:order-2
+            {{ end }} md:col-5 mb-6">
+            {{ partial "image" (dict "Src" .image "Alt" "feature image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
+          </div>
+          <div
+            class="{{ if not (modBool $i 2) }}
+              md:order-1
+            {{ end }} md:col-7 lg:col-6">
+            <h2 class="mb-4">
+              {{ .title | markdownify }}
+            </h2>
+            <p class="mb-8 text-lg">
+              {{ .content | markdownify }}
+            </p>
+            <ul>
+              {{ range .bulletpoints }}
+                <li class="relative mb-4 pl-6">
+                  <i class="fa fa-check absolute left-0 top-1.5"></i>
+                  {{ . | markdownify }}
+                </li>
+              {{ end }}
+            </ul>
+            {{ with .button }}
+              {{ if .enable }}
+                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
+                  {{ .label }}
+                  <i class="fa fa-arrow-right pl-2"></i>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  <!-- /Features -->
+
+  <!-- Testimonials -->
+  {{ with site.GetPage "sections/testimonial" }}
+    {{ if .Params.enable }}
+      <section class="section">
+        <div class="container">
+          <div class="row">
+            <div class="md:col-10 lg:col-8 xl:col-6 mx-auto mb-12 text-center">
+              <h2 class="mb-4">
+                {{ .Title | markdownify }}
+              </h2>
+              <p>
+                {{ .Params.description | markdownify }}
+              </p>
+            </div>
+            <div class="col-12">
+              <div class="swiper testimonial-slider">
+                <div class="swiper-wrapper">
+                  {{ range .Params.testimonials }}
+                    <div class="swiper-slide">
+                      <div
+                        class="bg-light dark:bg-darkmode-light rounded-lg px-7 py-10">
+                        <div class="text-text-dark dark:text-white">
+                          <svg
+                            width="33"
+                            height="20"
+                            viewBox="0 0 33 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M1.28375 19.41L0.79375 18.64C1.21375 17.0067 1.75042 15.07 2.40375 12.83C3.05708 10.5433 3.75708 8.28 4.50375 6.04C5.29708 3.75333 6.06708 1.77 6.81375 0.0899959H[...]"
+                              fill="currentColor" />
+                          </svg>
+                        </div>
+                        <blockquote class="mt-8">
+                          {{ .content | markdownify }}
+                        </blockquote>
+                        <div class="mt-11 flex items-center">
+                          <div class="text-text-dark dark:text-white">
+                            {{ partial "image" (dict "Src" .avatar "Size" "50x50" "Class" "rounded-full" "Alt" .name) }}
+                          </div>
+                          <div class="ml-4">
+                            <h3 class="h5 font-primary font-semibold">
+                              {{ .name }}
+                            </h3>
+                            <p class="text-text-dark dark:text-white">
+                              {{ .designation | markdownify }}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {{ end }}
+                </div>
+                <div
+                  class="testimonial-slider-pagination mt-9 flex items-center justify-center text-center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+  <!-- /Testimonials -->
 {{ end }}
