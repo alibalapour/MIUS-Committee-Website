@@ -68,6 +68,10 @@ name = "Resources"
 url = "/committee_resources"
 weight = 4
 
+[[main]]
+name = "Mentorship"
+url = "/mentorship"
+weight = 4.25
 
 [[main]]
 name = "Contact"
