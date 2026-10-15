@@ -1,3 +1,5 @@
+{{ with .Params.banner }}
+  {{ $banner := . }}
         <p class="mius-hero__lede">{{ $banner.content | markdownify }}</p>
         <div class="mius-hero__actions">
           {{ with $banner.button }}
