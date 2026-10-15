@@ -1,5 +1,5 @@
 ---
-title: "MUIS Career Panel"
+title: "MIUS Career Panel"
 date: 2026-10-22
 location: "Location TBD"
 summary: "Career Panel with industry professionals"
@@ -8,4 +8,4 @@ tags: ["Community", "Networking"]
 draft: true
 ---
 
-The VPC career panel will host a collection of recently transitioned trainees to industry and senior industry professionals to provide their experiences in the job application process and resume development for industry applicants in order to facilitate smoother transitions from research to industry. The panel will also host a Q&A session where new applicants can ask their questoins or advice.
+The VPC career panel will host a collection of recently transitioned trainees to industry and senior industry professionals to provide their experiences in the job application process and resume development for industry applicants in order to facilitate smoother transitions from research to industry. The panel will also host a Q&A session where new applicants can ask their questions or advice.
