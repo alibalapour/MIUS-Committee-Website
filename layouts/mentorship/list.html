@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="mius-page-hero">
+  <div class="container">
+    <p class="mius-eyebrow">{{ .Title }}</p>
+    <h1>{{ .Params.heading | default .Title }}</h1>
+    {{ with .Description }}
+      <p class="mius-page-hero__copy">{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="mius-section">
+  <div class="container">
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
