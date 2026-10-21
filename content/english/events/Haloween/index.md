@@ -3,7 +3,7 @@ title: "Halloween Celebration"
 date: 2026-10-30
 location: "RHNH Atrium"
 summary: "Halloween"
-cover: "Pumpkin.jpg"
+cover: "Halloween2026.png"
 tags: ["Networking", "Social"]
 draft: false
 ---
